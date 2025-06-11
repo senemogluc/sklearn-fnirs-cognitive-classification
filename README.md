@@ -1,12 +1,16 @@
-# Brand Name Initial Classifier using Deep Learning
+# Brain Signal-Based Brand Initial Classifier using Deep Learning
 
-This project trains a deep learning model to classify the **first character** of brand names using TensorFlow and Keras. The goal is to predict the starting letter (A-Z) of a brand based on a synthetic or character-level representation of the name.
+This project uses brain signal data (e.g., HBO, HBR, HbT levels) to classify the **first letter** of perceived brand names. The data is likely derived from fNIRS or a similar non-invasive neuroimaging technique that tracks blood oxygenation in the brain.
 
-## 🧠 Model
-- Utilizes an LSTM (Long Short-Term Memory) network to handle sequential character data.
-- One-hot encoding is used to represent characters for input to the model.
-- The model is trained on brand names and labels corresponding to their first letter.
+## 🧠 Data Description
+- Features include HBO (oxyhemoglobin), HBR (deoxyhemoglobin), and potentially total hemoglobin (HbT).
+- These signals are correlated with neural activity during brand recognition or perception tasks.
+- Labels correspond to the **first character** of the brand name shown to the participant.
 
-## 📊 Evaluation
-- The accuracy of the model is evaluated on a test set.
-- A confusion matrix is generated to visualize performance across different character classes.
+## 📈 Model
+- Deep learning model (LSTM-based) processes temporal brain signal data.
+- The model learns to predict the initial letter (A-Z) of the brand name based on signal patterns.
+
+## 🔬 Evaluation
+- Accuracy is measured using a test set.
+- A confusion matrix provides insight into which characters are most/least accurately predicted.
